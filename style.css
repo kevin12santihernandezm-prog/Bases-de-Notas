@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background:
+        radial-gradient(circle at top, #3b090d, transparent 45%),
+        #080808;
+
+    min-height: 100vh;
+    color: white;
+    padding: 30px 15px;
+}
+
+.container {
+    width: 100%;
+    max-width: 550px;
+    margin: auto;
+}
+
+/* ENCABEZADO */
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.icon {
+    font-size: 45px;
+    margin-bottom: 12px;
+}
+
+.header h1 {
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.header p {
+    color: #999;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* TARJETA PRINCIPAL */
+
+.card {
+    background: #151515;
+    padding: 30px;
+    border: 1px solid #333;
+    border-top: 4px solid #e50914;
+    border-radius: 14px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+}
+
+/* TITULOS */
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    color: #eee;
+}
+
+.section-title span {
+    width: 5px;
+    height: 20px;
+    background: #e50914;
+    border-radius: 5px;
+}
+
+.notes-title {
+    margin-top: 30px;
+}
+
+/* FORMULARIOS */
+
+label {
+    display: block;
+    color: #bbb;
+    font-size: 13px;
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    background: #222;
+    border: 1px solid #383838;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #e50914;
+    box-shadow: 0 0 8px rgba(229,9,20,0.2);
+}
+
+input::placeholder {
+    color: #777;
+}
+
+/* NOTAS */
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 15px;
+}
+
+.note-box {
+    background: #1c1c1c;
+    padding: 5px 10px 12px;
+    border: 1px solid #303030;
+    border-radius: 9px;
+}
+
+.note-box label {
+    color: #e50914;
+    font-weight: bold;
+}
+
+.note-box input {
+    background: #292929;
+}
+
+.note-box.full {
+    grid-column: 1 / -1;
+}
+
+/* BOTONES */
+
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 25px;
+    background: #e50914;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #b80710;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 18px rgba(229,9,20,0.3);
+}
+
+/* MENSAJES */
+
+#mensaje {
+    text-align: center;
+    color: #ff5555;
+    font-size: 13px;
+    margin-top: 15px;
+    min-height: 18px;
+}
+
+/* RESULTADOS */
+
+.result {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid #393939;
+    animation: aparecer 0.5s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.result-header h2 {
+    font-size: 17px;
+    color: #e50914;
+}
+
+.result-header span {
+    font-size: 25px;
+}
+
+/* INFORMACION */
+
+.student-info {
+    background: #202020;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.student-info p {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.student-info h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.student-info h3:last-child {
+    margin-bottom: 0;
+}
+
+/* PROMEDIO */
+
+.average-container {
+    background: #220d0f;
+    border: 1px solid #6d171b;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+}
+
+.average-container p {
+    color: #aaa;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+#promedio {
+    font-size: 55px;
+    font-weight: 900;
+    margin: 10px 0;
+}
+
+.status {
+    display: inline-block;
+    padding: 7px 18px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.aprobado {
+    background: #123b23;
+    color: #4ade80;
+}
+
+.reprobado {
+    background: #4a1010;
+    color: #ff6060;
+}
+
+/* DETALLE DE NOTAS */
+
+.notes-summary {
+    margin-top: 25px;
+}
+
+.notes-summary h3 {
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.note-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 11px;
+    margin-bottom: 7px;
+    background: #222;
+    border-radius: 6px;
+    color: #ccc;
+    font-size: 13px;
+}
+
+.note-row strong {
+    color: white;
+}
+
+/* REINICIAR */
+
+.reset-button {
+    background: #292929;
+    border: 1px solid #444;
+}
+
+.reset-button:hover {
+    background: #3a3a3a;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    margin-top: 25px;
+    color: #666;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 480px) {
+    .card {
+        padding: 22px 18px;
+    }
+
+    .header h1 {
+        font-size: 25px;
+    }
+
+    #promedio {
+        font-size: 45px;
+    }
+}

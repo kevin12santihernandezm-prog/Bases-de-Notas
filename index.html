@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Base de Notas | Sistema Académico</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="header">
+            <div class="icon">📚</div>
+
+            <h1>BASE DE NOTAS</h1>
+
+            <p>Sistema de cálculo académico</p>
+        </header>
+
+        <section class="card">
+
+            <div class="section-title">
+                <span></span>
+                INFORMACIÓN DEL ESTUDIANTE
+            </div>
+
+            <label for="nombre">Nombre completo</label>
+            <input
+                type="text"
+                id="nombre"
+                placeholder="Ingrese su nombre"
+            >
+
+            <label for="curso">Curso o grado</label>
+            <input
+                type="text"
+                id="curso"
+                placeholder="Ejemplo: ADSO"
+            >
+
+            <div class="section-title notes-title">
+                <span></span>
+                INGRESO DE CALIFICACIONES
+            </div>
+
+            <div class="notes-grid">
+
+                <div class="note-box">
+                    <label for="nota1">Nota 1</label>
+                    <input type="number" id="nota1"
+                        placeholder="0.0" min="0" max="5" step="0.1">
+                </div>
+
+                <div class="note-box">
+                    <label for="nota2">Nota 2</label>
+                    <input type="number" id="nota2"
+                        placeholder="0.0" min="0" max="5" step="0.1">
+                </div>
+
+                <div class="note-box">
+                    <label for="nota3">Nota 3</label>
+                    <input type="number" id="nota3"
+                        placeholder="0.0" min="0" max="5" step="0.1">
+                </div>
+
+                <div class="note-box">
+                    <label for="nota4">Nota 4</label>
+                    <input type="number" id="nota4"
+                        placeholder="0.0" min="0" max="5" step="0.1">
+                </div>
+
+                <div class="note-box full">
+                    <label for="nota5">Nota 5</label>
+                    <input type="number" id="nota5"
+                        placeholder="0.0" min="0" max="5" step="0.1">
+                </div>
+
+            </div>
+
+            <button onclick="calcularPromedio()">
+                CALCULAR PROMEDIO
+            </button>
+
+            <p id="mensaje"></p>
+
+            <section id="resultado" class="result hidden">
+
+                <div class="result-header">
+                    <h2>RESULTADO ACADÉMICO</h2>
+                    <span id="estadoIcono">📊</span>
+                </div>
+
+                <div class="student-info">
+                    <p>Estudiante</p>
+                    <h3 id="resultadoNombre"></h3>
+
+                    <p>Curso</p>
+                    <h3 id="resultadoCurso"></h3>
+                </div>
+
+                <div class="average-container">
+                    <p>PROMEDIO FINAL</p>
+                    <div id="promedio">0.0</div>
+                    <span id="estado" class="status"></span>
+                </div>
+
+                <div class="notes-summary">
+                    <h3>Detalle de notas</h3>
+                    <div id="detalleNotas"></div>
+                </div>
+
+                <button class="reset-button" onclick="reiniciar()">
+                    NUEVO REGISTRO
+                </button>
+
+            </section>
+
+        </section>
+
+        <footer>
+            SISTEMA ACADÉMICO | DESARROLLADO CON HTML, CSS Y JS
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
